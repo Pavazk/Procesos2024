@@ -11,4 +11,6 @@ public interface UserRepository extends CrudRepository<User, Long> {
     Optional<User> findByEmail(String email);
 
     List<User> findByBirthDay(LocalDate birthDate);
+    //select * from user where email = "?" and id != "?"
+    Optional<User> findByEmailAndIdNot(String email, Long id);
 }
